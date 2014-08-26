@@ -13,7 +13,6 @@ RUN adduser --disabled-password --gecos "" agent
 RUN chown -R agent /var/build-agent
 RUN chmod +x /var/build-agent/bin/agent.sh
 RUN chmod +x /var/build-agent/run-agent.sh
-RUN cp /var/build-agent/conf/buildAgent.dist.properties /var/build-agent/conf/buildAgent.properties
 
 VOLUME ["/var/build-agent"]
 
