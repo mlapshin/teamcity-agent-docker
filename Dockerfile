@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends wget openjdk-7-jdk wget unzip build-essential git
+RUN apt-get install -y --no-install-recommends wget openjdk-7-jdk wget unzip build-essential git man
 RUN mkdir -p /var/build-agent/
 RUN mkdir -p /var/build-agent/work
 
@@ -14,7 +14,7 @@ RUN chown -R agent /var/build-agent
 RUN chmod +x /var/build-agent/bin/agent.sh
 RUN chmod +x /var/build-agent/run-agent.sh
 
-VOLUME ["/var/build-agent/work"]
+VOLUME ["/var/build-agent"]
 
 # install leiningen
 RUN wget -O /usr/bin/lein https://raw.github.com/technomancy/leiningen/stable/bin/lein
