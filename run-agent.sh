@@ -10,5 +10,6 @@ if [ ! -f "$AGENT_CONFIG" ]; then
 fi
 
 export HOME=/home/agent
+export AGENT_NAME=$2
 
 /var/build-agent/bin/agent.sh run
