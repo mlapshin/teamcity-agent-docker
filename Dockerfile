@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends wget openjdk-7-jdk wget unzip build-essential git man
+RUN apt-get install -y --no-install-recommends wget openjdk-7-jdk wget unzip build-essential git man postgresql-client-9.3
 RUN mkdir -p /var/build-agent/
 RUN mkdir -p /var/build-agent/work
 
