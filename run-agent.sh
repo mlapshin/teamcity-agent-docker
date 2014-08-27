@@ -9,5 +9,6 @@ if [ ! -f "$AGENT_CONFIG" ]; then
     sed -i.bak "s@ownPort=9090@ownPort=$3@g" $AGENT_CONFIG
 fi
 
+export HOME=/home/agent
 
-bash -l -c '/var/build-agent/bin/agent.sh run'
+/var/build-agent/bin/agent.sh run
