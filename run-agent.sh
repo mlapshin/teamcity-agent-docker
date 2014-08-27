@@ -10,4 +10,4 @@ if [ ! -f "$AGENT_CONFIG" ]; then
 fi
 
 
-/var/build-agent/bin/agent.sh run
+bash -l -c '/var/build-agent/bin/agent.sh run'
