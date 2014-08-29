@@ -22,7 +22,8 @@ RUN chmod +x /usr/bin/lein
 
 RUN mkdir -p /home/agent/.lein/profiles.d/
 ADD teamcity.clj /home/agent/.lein/profiles.d/teamcity.clj
-RUN chown -R agent /home/agent/.lein/
+ADD selenese-runner.jar /home/agent/selenese-runner.jar
+RUN chown -R agent /home/agent/
 
 # install nvm
 RUN su agent -c 'wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | sh'
