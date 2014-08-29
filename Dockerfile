@@ -19,6 +19,7 @@ VOLUME ["/var/build-agent"]
 # install leiningen
 RUN wget -O /usr/bin/lein https://raw.github.com/technomancy/leiningen/stable/bin/lein
 RUN chmod +x /usr/bin/lein
+RUN /usr/bin/lein
 
 RUN mkdir -p /home/agent/.lein/profiles.d/
 ADD teamcity.clj /home/agent/.lein/profiles.d/teamcity.clj
